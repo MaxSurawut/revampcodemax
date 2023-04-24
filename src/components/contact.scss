@@ -1,0 +1,132 @@
+.contact-wrapper{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    min-height: 400px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 14px 9px rgba(0,0,0,0.39);
+    -webkit-box-shadow: 1px 1px 14px 9px rgba(0,0,0,0.39);
+    -moz-box-shadow: 1px 1px 14px 9px rgba(0,0,0,0.39);
+    z-index: 9999;
+    background-color: #fff;
+    color: var(--primary-color);
+    padding: 1rem;
+    
+ 
+
+    .contact-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        h2{
+            font-size: 2rem;
+        }
+        
+
+        form{
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            width: 80%;
+
+            input[type=email], input[type=text], input[type=number]{
+                width: 100%;
+                padding: .5rem;
+                border-radius: 10px;
+                outline: none;
+            }
+
+            button{
+                width: 100%;
+                background-color: var(--primary-color);
+                color: #fff;
+                padding: .7rem;
+                border: 1px solid var(--primary-color);
+                border-radius: 10px;
+                cursor: pointer;
+                transition: all .3s ease;
+                text-transform: uppercase;
+
+                &:hover{
+                    background-color: #fff;
+                    color: var(--primary-color);
+                }
+            }
+        }
+        h5{
+            color: #000000;
+            font-weight: lighter;
+            margin-top: .5rem;
+            cursor: pointer;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .contact-wrapper{
+        
+        width: 90%;
+        min-height: 400px;
+        
+        
+     
+    
+        .contact-box{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+    
+            
+    
+            form{
+                margin-top: 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 20px;
+                width: 80%;
+    
+                input[type=email], input[type=text], input[type=number]{
+                    width: 100%;
+                    padding: .5rem;
+                    border-radius: 10px;
+                    outline: none;
+                }
+    
+                button{
+                    width: 100%;
+                    background-color: var(--primary-color);
+                    color: #fff;
+                    padding: .7rem;
+                    border: 1px solid var(--primary-color);
+                    border-radius: 10px;
+                    cursor: pointer;
+                    transition: all .3s ease;
+                    text-transform: uppercase;
+    
+                    &:hover{
+                        background-color: #fff;
+                        color: var(--primary-color);
+                    }
+                }
+            }
+            h5{
+                color: #000000;
+                font-weight: lighter;
+                margin-top: .5rem;
+                cursor: pointer;
+            }
+        }
+    }
+}

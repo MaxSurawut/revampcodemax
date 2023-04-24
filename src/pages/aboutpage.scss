@@ -1,0 +1,110 @@
+.about-wrapper {
+  max-width: 1340px;
+  min-height: calc(100vh - 70px);
+  margin: 0 auto;
+  text-align: center;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h1 {
+    padding-top: 2rem;
+    font-size: clamp(3rem, 2.4118rem + 3.1373vw, 5rem);
+  }
+
+  h2 {
+    padding-top: 4rem;
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 2rem;
+    width: 80%;
+    margin: 1rem auto;
+  }
+
+  .animation1 {
+    animation-duration: 3s;
+    animation-name: fadeIn;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  .animation2 {
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-name: fadeIn;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  .animation3 {
+    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-name: fadeIn;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  .animation4 {
+    animation-delay: 3s;
+    animation-duration: 3s;
+    animation-name: fadeIn;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  .animation5 {
+    animation-delay: 4s;
+    animation-duration: 3s;
+    animation-name: fadeIn;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  .animation6 {
+    animation-delay: 5s;
+    animation-duration: 3s;
+    animation-name: fadeIn;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  .animation7 {
+    animation-delay: 6s;
+    animation-duration: 3s;
+    animation-name: fadeIn;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+
+    100% {
+      opacity: 1;
+    }
+    
+  }
+}
+@media only screen and (max-width: 600px){
+    .about-wrapper {
+        width: 100%;
+        padding: 1rem;
+      
+        
+      
+        h2 {
+          font-size: 1.7rem;
+        }
+      
+        p {
+          font-size: 1.3rem;
+          width: 100%;
+        }
+      
+        
+      }
+      
+}
