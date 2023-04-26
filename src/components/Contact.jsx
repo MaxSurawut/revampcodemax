@@ -6,11 +6,6 @@ const Contact = ({ action, onClose }) => {
 
   useEffect(() => {
     setIsActive(action);
-    if (action) {
-        document.body.classList.add("no-scroll");
-      } else {
-        document.body.classList.remove("no-scroll");
-      }
   }, [action]);
 
   const handleClickActive = () => {
@@ -25,7 +20,7 @@ const Contact = ({ action, onClose }) => {
         style={{ display: isActive ? "block" : "none" }}
       >
         <div className="contact-box">
-          <h2>กรุณากรอกข้อมูลเพื่อให้ทางเจ้าหน้าที่ติดต่อกลับ</h2>
+          <h2>กรุณากรอกข้อมูล</h2>
           <form>
             <input type="email" placeholder="your Email address" />
             <input type="text" placeholder="your Name" />
