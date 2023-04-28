@@ -8,10 +8,10 @@ import Contact from "./Contact";
 
 const Navbar = () => {
   const menu = [
-    { mName: "Home", link: "/" },
-    { mName: "About", link: "/about" },
-    { mName: "blog", link: "/blog" },
-    { mName: "template", link: "/template" },
+    { mName: "หน้าหลัก", link: "/" },
+    { mName: "เกี่ยวกับฉัน", link: "/about" },
+    { mName: "บทความ", link: "/blog" },
+    { mName: "ตัวอย่าง", link: "/template" },
   ];
 
   const [isActive, setIsActive] = useState(false);
@@ -50,7 +50,7 @@ const Navbar = () => {
             </Link>
           ))}
           <div className="contactBtn" onClick={handleClick}>
-            Contact
+            ติดต่อเรา
           </div>
           <Contact action={isClick} onClose={handleClose} />
         </ul>

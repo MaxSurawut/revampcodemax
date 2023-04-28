@@ -20,11 +20,14 @@ const Contact = ({ action, onClose }) => {
         style={{ display: isActive ? "block" : "none" }}
       >
         <div className="contact-box">
-          <h2>กรุณากรอกข้อมูล</h2>
+          <div className="text-box">
+            <h2>ขอบคุณที่ให้ความสนใจในบริการของเรา</h2>
+            <h2>กรุณากรอกข้อมูลและแนบตัวอย่างงานเพื่อประเมินราคา</h2>
+          </div>
           <form>
-            <input type="email" placeholder="your Email address" />
-            <input type="text" placeholder="your Name" />
-            <input type="number" placeholder="your Phone number" />
+            <input type="email" placeholder="อีเมลของคุณ" />
+            <input type="text" placeholder="ชื่อของคุณ" />
+            <input type="number" placeholder="เบอร์ติดต่อของคุณ" />
             <input type="file" />
             <button>Submit</button>
           </form>
