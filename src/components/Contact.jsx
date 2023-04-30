@@ -2,13 +2,12 @@ import { useState, useEffect } from "react";
 import "./contact.scss";
 import axios from "axios";
 
-
 const Contact = ({ action, onClose }) => {
   const [isActive, setIsActive] = useState(false);
-  const [email, setEmail] = useState('')
-  const [name, setName] = useState('')
-  const [phone, setPhone] = useState('')
-  const [image, setImage] = useState(null)
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [file, setFile] = useState();
 
   useEffect(() => {
     setIsActive(action);
@@ -18,42 +17,28 @@ const Contact = ({ action, onClose }) => {
     setIsActive(false);
     onClose();
   };
-  
+
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    axios.post('http://localhost:3000/customers', {
-      email: email,
-      name: name,
-      phone: phone,
-      image: image
-    })
+    const formData = new FormData();
+    formData.append('image', file)
+    
+    axios.post('http://localhost:3000/customers', formData)
     .then(response => {
-      console.log(response)
-      alert('Data Saved')
-      setEmail('')
-      setName('')
-      setPhone('')
-      setImage(null)
+      if(response.data.Status === "Success"){
+        console.log("Succeeded")
+      }else{
+        console.log('Failed')
+      }
     })
-    .catch((error) => {
-      console.log(error)
-      alert('something wrong')
-    })
-
-
-  }
-
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    const reader = new FileReader();
-
-    reader.onload = () => {
-      setImage(reader.result);
-    };
-
-    reader.readAsBinaryString(file);
+    .catch(err => console.log(err))
   };
+
+  const handleFile = (e) => {
+    setFile(e.target.files[0]);
+  };
+
   return (
     <>
       <div
@@ -66,18 +51,28 @@ const Contact = ({ action, onClose }) => {
             <h2>กรุณากรอกข้อมูลและแนบตัวอย่างงานเพื่อประเมินราคา</h2>
           </div>
           <form onSubmit={handleSubmit}>
-            <input type="email"
+            <input
+              type="email"
               placeholder="อีเมลของคุณ"
-              onChange={(e) => { setEmail(e.target.value) }} />
-            <input type="text"
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
+            <input
+              type="text"
               placeholder="ชื่อของคุณ"
-              onChange={(e) => { setName(e.target.value) }} />
-            <input type="number"
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
+            />
+            <input
+              type="number"
               placeholder="เบอร์ติดต่อของคุณ"
-              onChange={(e) => { setPhone(e.target.value) }} />
-            <input type="file" 
-            accept="image/*"
-            onChange={handleFileChange} />
+              onChange={(e) => {
+                setPhone(e.target.value);
+              }}
+            />
+            <input type="file" onChange={handleFile} />
             <button>Submit</button>
           </form>
           <h5 onClick={handleClickActive}>ปิดหน้าต่างนี้</h5>
