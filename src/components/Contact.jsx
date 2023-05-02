@@ -18,11 +18,13 @@ const Contact = ({ action, onClose }) => {
     onClose();
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
 
     const formData = new FormData();
     formData.append('image', file)
+    formData.append('email', email)
+    formData.append('name', name)
+    formData.append('phone', phone)
     
     axios.post('http://localhost:3000/customers', formData)
     .then(response => {
@@ -39,6 +41,21 @@ const Contact = ({ action, onClose }) => {
     setFile(e.target.files[0]);
   };
 
+  const isEmailValidate = (event) => {
+    event.preventDefault();
+    if (!isValidEmail(email)) {
+      alert('Please enter a valid email address.');
+    }
+    handleSubmit()
+  }
+
+  function isValidEmail(email) {
+    // Regular expression pattern for email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,4}$/;
+    // Test the email against the pattern
+    return emailPattern.test(email);
+  }
+
   return (
     <>
       <div
@@ -50,7 +67,7 @@ const Contact = ({ action, onClose }) => {
             <h2>ขอบคุณที่ให้ความสนใจในบริการของเรา</h2>
             <h2>กรุณากรอกข้อมูลและแนบตัวอย่างงานเพื่อประเมินราคา</h2>
           </div>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={isEmailValidate}>
             <input
               type="email"
               placeholder="อีเมลของคุณ"
@@ -66,8 +83,9 @@ const Contact = ({ action, onClose }) => {
               }}
             />
             <input
-              type="number"
+              type="text"
               placeholder="เบอร์ติดต่อของคุณ"
+              maxLength={10}
               onChange={(e) => {
                 setPhone(e.target.value);
               }}
