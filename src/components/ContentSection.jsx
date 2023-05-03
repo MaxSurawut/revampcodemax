@@ -1,4 +1,5 @@
 import "./contentsection.scss";
+import { Link } from "react-router-dom";
 
 function ContentSection() {
   return (
@@ -21,7 +22,7 @@ function ContentSection() {
           </p>
           <div className="footer-card">
           <p className='dateCreate'>วันที่ 26 เม.ย. 66</p>
-          <p className="readMore">อ่านเพิ่มเติม</p>
+          <Link to=''><p className="readMore">อ่านเพิ่มเติม</p></Link> 
           </div>
         </div>
       </div>
