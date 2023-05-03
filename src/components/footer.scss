@@ -1,0 +1,27 @@
+.footer-wrapper{
+    background-color: var(--primary-color);
+    width: 100vw;
+    height: 70px;
+    color: white;
+    margin-top: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .footer-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        .footer-icon{
+            display: flex;
+            align-items: center;
+
+            .icon{
+                width: 34px;
+                height: 34px;
+            }
+        }
+    }
+}
