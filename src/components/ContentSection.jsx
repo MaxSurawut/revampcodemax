@@ -1,28 +1,28 @@
+
 import "./contentsection.scss";
 import { Link } from "react-router-dom";
 
-function ContentSection() {
+
+
+function ContentSection({title, image, body, date, id}) {
+
   return (
     <div>
       <div className="content-box">
         <img
-          src="https://plus.unsplash.com/premium_photo-1679987740567-5c03433f33a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzMXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+          src={image}
           alt=""
         />
         <div className="box-desc">
           <h3>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
-            suscipit?
+            {title}
           </h3>
           <p className="box-text">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi,
-            molestias harum! Harum natus iste libero repellat odio excepturi,
-            doloremque, earum quasi accusantium, officia aliquid corporis
-            dignissimos vitae eligendi vel voluptates?
+            {body}
           </p>
           <div className="footer-card">
-          <p className='dateCreate'>วันที่ 26 เม.ย. 66</p>
-          <Link to=''><p className="readMore">อ่านเพิ่มเติม</p></Link> 
+          <p className='dateCreate'>{date}</p>
+          <Link to={`/blog/${id}`}><p className="readMore">อ่านเพิ่มเติม</p></Link> 
           </div>
         </div>
       </div>
