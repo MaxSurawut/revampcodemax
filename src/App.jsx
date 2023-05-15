@@ -7,6 +7,7 @@ import BlogPage from './pages/BlogPage'
 import TemplatePage from './pages/TemplatePage'
 import SingleBlog from "./pages/SingleBlog";
 import Login from "./pages/Login";
+import AdminPage from "./pages/AdminPage";
 
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
         <Route path='/template' element={<TemplatePage/>}/>
       </Route>
       <Route path="/login" element={<Login/>}/>
+      <Route path="/admin/dashboard" element={<AdminPage/>}/>
+      <Route path="/admin/dashboard/:subpage" element={<AdminPage/>}/>
     </Routes>
   );
 }

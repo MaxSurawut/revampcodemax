@@ -1,0 +1,27 @@
+.customerlist-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  
+    .customerInfo {
+      width: 100%;
+      padding: 1rem;
+      margin: 0 auto;
+      table {
+        width: 100%;
+        text-align: center;
+  
+        th {
+          color: var(--primary-color);
+        }
+       
+        tbody {
+          td {
+            padding-top: 15px;
+          }
+        }
+      }
+    }
+  }
+  
