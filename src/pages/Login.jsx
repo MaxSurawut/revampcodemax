@@ -15,7 +15,7 @@ function Login() {
     axios.post('http://localhost:3000/login', {email, password})
     .then(response => {
       localStorage.setItem('token', response.data.token);
-      navigate("/admin/dashboard");
+      navigate("/admin/dashboard/");
     })
     .catch(err => {
       console.log(err)

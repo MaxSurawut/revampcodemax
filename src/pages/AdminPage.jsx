@@ -9,6 +9,8 @@ function AdminPage() {
   const location = useLocation();
   const basePathname = location.pathname.slice(0, 17);
 
+  console.log(basePathname)
+
   useEffect(() => {
     const token = localStorage.getItem("token");
 

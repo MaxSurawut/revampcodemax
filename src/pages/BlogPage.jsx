@@ -24,6 +24,7 @@ const BlogPage = () => {
             body={item.body}
             date={item.created_at}
             id={item.id}
+            category={item.category}
           />
         ))}
       </div>

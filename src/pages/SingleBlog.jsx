@@ -32,7 +32,7 @@ function SingleBlog() {
         <h2 className="subject">{content.title}</h2>
         <p className="desc">{content.body}</p>
         <div className="catagory">
-          Tag: <span>{content.catagory}</span>
+          Tag: <span>{content.category}</span>
         </div>
         <div className="dateandauthor">
           <p className="author">

@@ -29,7 +29,8 @@ const Contact = ({ action, onClose }) => {
     axios.post('http://localhost:3000/customers', formData)
     .then(response => {
       if(response.data.Status === "Success"){
-        console.log("Succeeded")
+        alert('ได้รับข้อมูลเรียบร้อย ทางเราจะติดต่อกลับโดยเร็วที่สุด')
+        handleClickActive()
       }else{
         console.log('Failed')
       }

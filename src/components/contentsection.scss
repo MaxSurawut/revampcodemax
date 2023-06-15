@@ -24,6 +24,7 @@
       height: 100px;
       font-weight: lighter;
       overflow: hidden;
+      margin-bottom: .5rem;
     }
     .footer-card {
       display: flex;
@@ -31,7 +32,17 @@
       font-style: italic;
       font-size: 0.8rem;
       color: var(--primary-color);
-     
+      margin-top: 1rem;
+      
+      .readMore{
+        font-weight: bold;
+      }
+    }
+    .category{
+      color: white;
+      background-color: var(--primary-color);
+      border-radius: 5px;
+      padding: 0.2rem 0.5rem;
     }
   }
 }
