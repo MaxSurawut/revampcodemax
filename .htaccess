@@ -9,3 +9,8 @@ RewriteRule ^ /index.html
 
 
 AddType application/javascript .js
+
+</IfModule>
+<IfModule mod_mime.c>
+  AddType text/javascript js mjs
+</IfModule>
