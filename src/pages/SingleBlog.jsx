@@ -13,6 +13,11 @@ function SingleBlog() {
   });
   const urlID = useParams()
 
+  const formattedDate = new Date(content.created_at).toLocaleDateString("th-TH", {
+    day: "numeric",
+    month: "short",
+    year: "2-digit",
+  });
 
   useEffect(() => {
     axios.get(`http://localhost:3000/blog/${urlID.id}`).then((response) => {
@@ -25,7 +30,7 @@ function SingleBlog() {
     <div className="singleblog-wrapper">
       <div className="blog-content">
         <img
-          src={content.image}
+          src={`http://localhost:3000/uploads/${content.image}`}
           alt=""
         />
 
@@ -38,7 +43,7 @@ function SingleBlog() {
           <p className="author">
             written by <span>Admin</span>
           </p>
-          <p className="createDate">{content.created_at}</p>
+          <p className="createDate">{formattedDate}</p>
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ import "./adminpage.scss";
 import { useEffect, useState } from "react";
 import Customerlists from "../components/Customerlists";
 import Addblog from "../components/Addblog";
+import Portfolio from "../components/Portfolio";
 
 function AdminPage() {
   const navigate = useNavigate();
@@ -41,7 +42,7 @@ function AdminPage() {
               <Link to={`${basePathname}addblog`}>บทความ</Link>
             </li>
             <li>
-              <Link to={`${basePathname}porfolio`}>ตัวอย่างงาน</Link>
+              <Link to={`${basePathname}portfolio`}>ตัวอย่างงาน</Link>
             </li>
             <li className="logoutBtn" onClick={handleLogout}>
               Log out
@@ -51,6 +52,7 @@ function AdminPage() {
         <div className="adminpanel-dynamicbox">
           {subpage === "customer" && <Customerlists />}
           {subpage === "addblog" && <Addblog/>}
+          {subpage === "portfolio" && <Portfolio/>}
         </div>
       </div>
     </div>
