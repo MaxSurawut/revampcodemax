@@ -2,6 +2,7 @@ import { useNavigate, Link, useParams, useLocation } from "react-router-dom";
 import "./adminpage.scss";
 import { useEffect, useState } from "react";
 import Customerlists from "../components/Customerlists";
+import Addblog from "../components/Addblog";
 
 function AdminPage() {
   const navigate = useNavigate();
@@ -49,7 +50,7 @@ function AdminPage() {
         </div>
         <div className="adminpanel-dynamicbox">
           {subpage === "customer" && <Customerlists />}
-          {subpage === "addblog" && <div>add blog now</div>}
+          {subpage === "addblog" && <Addblog/>}
         </div>
       </div>
     </div>
