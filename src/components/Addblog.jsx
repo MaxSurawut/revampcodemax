@@ -16,8 +16,7 @@ function Addblog() {
 
   const submitContent = (e) => {
     e.preventDefault();
-    console.log(file);
-    console.log(textContent);
+   
     const formData = new FormData();
     formData.append("title", title);
     formData.append("category", category);
