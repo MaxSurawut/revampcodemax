@@ -11,7 +11,7 @@ function Footer() {
           <AiFillFacebook className="icon" /> &nbsp;:&nbsp; CODEMAX
         </div>
         <div className="footer-icon">
-          <MdPhoneInTalk className="icon" /> &nbsp;:&nbsp; 092-448-6399 (Max)
+          <MdPhoneInTalk className="icon" /> &nbsp;:&nbsp; 092-448-6399
         </div>
       </div>
     </div>

@@ -2,7 +2,6 @@
     max-width: 1340px;
     margin: 0 auto;
     height: calc(100vh - 70px);
-    margin-top: 70px;
     display: flex;
     align-items: center;
     padding: 0 1rem;
@@ -120,11 +119,11 @@
 
         .heroBanner{
             flex-direction: column;
+            gap: 1rem;
 
             .left{
     
                 h1{
-                    margin-top: 2rem;
                     font-size: 3rem;
                     text-align: center;
                 }
@@ -132,8 +131,10 @@
             }
             .right{
                 flex: 1;
+                display: flex;
+                justify-content: center;
                 img{
-                    width: 100%;
+                    width: 50%;
                 }
             }
         }
@@ -182,12 +183,12 @@
     
                 &:nth-child(odd){
                     align-items: center;
-                    padding-right: 0;
+                    padding: 0;
                 }
     
                 &:nth-child(even){
                     align-items: center;
-                    padding-left: 0;
+                    padding: 0;
                 }
                 .box-wrapper{
                     width: 100%;
@@ -213,7 +214,21 @@
         }
     }
 }
+@media only screen and (max-width: 600px){
+    .heroBanner-wrapper{
 
+        .heroBanner{
+            margin-top: 70px;
+            .right{
+
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    
+    }
+}
 @media only screen and (max-width: 450px){
     .heroBanner-wrapper{
 
