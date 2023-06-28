@@ -12,7 +12,7 @@ function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
     console.log('submitting')
-    axios.post('http://localhost:3000/login', {email, password})
+    axios.post('https://mainapi.code-max.com/login', {email, password})
     .then(response => {
       localStorage.setItem('token', response.data.token);
       navigate("/admin/dashboard/");

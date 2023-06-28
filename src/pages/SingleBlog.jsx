@@ -20,7 +20,7 @@ function SingleBlog() {
   });
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/blog/${urlID.id}`).then((response) => {
+    axios.get(`https://mainapi.code-max.com/blog/${urlID.id}`).then((response) => {
       setContent(response.data[0]);
   
     });
@@ -30,7 +30,7 @@ function SingleBlog() {
     <div className="singleblog-wrapper">
       <div className="blog-content">
         <img
-          src={`http://localhost:3000/uploads/${content.image}`}
+          src={`https://mainapi.code-max.com/uploads/${content.image}`}
           alt=""
         />
 

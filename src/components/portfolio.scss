@@ -1,12 +1,54 @@
-.portfolio-section{
-    margin: 1rem;
+.portfolio-section {
+  margin: 1rem;
+  
+  .add-portfolio form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  hr {
+    margin: 1rem 0;
+  }
+  .portfolio-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 
-    .add-portfolio form{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+    .protfolio-card {
+      max-width: 300px;
+      border: 1px solid black;
+      overflow: hidden;
+  
+      img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+  
+      .desc-section {
+        padding: 0.5rem;
+  
+        .product-detail {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+  
+        }
+  
+        .product-title{
+          font-weight: 900;
+          color: var(--primary-color);
+        }
+  
+        .product-link{
+          text-decoration: underline;
+        }
+        .product-category {
+          font-size: 14px;
+          font-style: italic;
+        }
+      }
     }
-    hr{
-        margin: 1rem 0;
-    }
+  }
+  
 }

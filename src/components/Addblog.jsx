@@ -24,7 +24,7 @@ function Addblog() {
     formData.append("text", textContent);
 
     axios
-      .post("http://localhost:3000/addblog", formData)
+      .post("https://mainapi.code-max.com/addblog", formData)
       .then((response) => {
         if (response.data.Status === "Success") {
           alert("บันทึกบทความเรียบร้อยแล้ว");
@@ -36,7 +36,7 @@ function Addblog() {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:3000/allblog").then((response) => {
+    axios.get("https://mainapi.code-max.com/allblog").then((response) => {
       setContent(response.data);
     });
   }, []);

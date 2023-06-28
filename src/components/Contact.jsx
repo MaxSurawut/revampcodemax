@@ -26,7 +26,7 @@ const Contact = ({ action, onClose }) => {
     formData.append('name', name)
     formData.append('phone', phone)
     
-    axios.post('http://localhost:3000/customers', formData)
+    axios.post('https://mainapi.code-max.com/customers', formData)
     .then(response => {
       if(response.data.Status === "Success"){
         alert('ได้รับข้อมูลเรียบร้อย ทางเราจะติดต่อกลับโดยเร็วที่สุด')

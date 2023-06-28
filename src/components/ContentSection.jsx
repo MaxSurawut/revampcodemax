@@ -11,7 +11,7 @@ function ContentSection({ title, image, body, date, id, category }) {
   return (
     <div>
       <div className="content-box">
-      <img src={`http://localhost:3000/uploads/${image}`} alt="" />
+      <img src={`https://mainapi.code-max.com/uploads/${image}`} alt="" />
         <div className="box-desc">
           <h3>{title}</h3>
           <p className="box-text">{body}</p>

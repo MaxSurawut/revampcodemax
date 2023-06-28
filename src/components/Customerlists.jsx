@@ -7,7 +7,7 @@ function Customerlists() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/allcustomer")
+      .get("https://mainapi.code-max.com/allcustomer")
       .then((response) => {
         const sortedCustomers = response.data.sort((a, b) => {
             return new Date(b.created_at) - new Date(a.created_at);
@@ -42,7 +42,7 @@ function Customerlists() {
                 <td>{customer.email}</td>
                 <td>{customer.phone}</td>
                 <td>
-                  <a href={'http://localhost:3000/uploads/'+customer.image} target="_blank" rel="noopener noreferrer">
+                  <a href={'https://mainapi.code-max.com/uploads/'+customer.image} target="_blank" rel="noopener noreferrer">
                     Click
                   </a>
                 </td>

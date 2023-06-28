@@ -11,7 +11,7 @@ const Navbar = () => {
     { mName: "หน้าหลัก", link: "/" },
     { mName: "เกี่ยวกับฉัน", link: "/about" },
     { mName: "บทความ", link: "/blog" },
-    { mName: "ตัวอย่าง", link: "/template" },
+    { mName: "ตัวอย่าง", link: "/portfolio" },
   ];
 
   const [isActive, setIsActive] = useState(false);

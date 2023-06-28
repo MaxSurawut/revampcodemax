@@ -7,7 +7,7 @@ const BlogPage = () => {
   const [content, setContent] = useState([]);
   
   useEffect(() => {
-    axios.get("http://localhost:3000/allblog").then((response) => {
+    axios.get("https://mainapi.code-max.com/allblog").then((response) => {
       setContent(response.data);
     });
   }, []);

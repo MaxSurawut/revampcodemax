@@ -4,10 +4,10 @@ import Layout from "./components/Layout";
 import HomePage from "./pages/Homepage";
 import AboutPage from './pages/AboutPage'
 import BlogPage from './pages/BlogPage'
-import TemplatePage from './pages/TemplatePage'
 import SingleBlog from "./pages/SingleBlog";
 import Login from "./pages/Login";
 import AdminPage from "./pages/AdminPage";
+import PortFolioPage from './pages/PortfolioPage'
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         <Route path="/about" element={<AboutPage/>}/>
         <Route path='/blog' element={<BlogPage/>}/>
         <Route path='/blog/:id' element={<SingleBlog/>}/>
-        <Route path='/template' element={<TemplatePage/>}/>
+        <Route path='/portfolio' element={<PortFolioPage/>}/>
       </Route>
       <Route path="/login" element={<Login/>}/>
       <Route path="/admin/dashboard" element={<AdminPage/>}/>
